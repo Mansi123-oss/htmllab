@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.layout {
+  border: 2px solid #030303;
+  padding: 10px;
+  width: 300px;
+  background: white;
+}
+
+.layout h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Common box styling */
+.box {
+  background-color: #ad6464;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Desktop layout grid */
+.desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "A A A"
+    "B C C"
+    "D E E";
+  gap: 10px;
+}
+
+.desktop .A { grid-area: A; }
+.desktop .B { grid-area: B; }
+.desktop .C { grid-area: C; }
+.desktop .D { grid-area: D; }
+.desktop .E { grid-area: E; }
+
+/* Mobile layout grid */
+.mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "A"
+    "B"
+    "C"
+    "D"
+    "E";
+  gap: 10px;
+}
+
+.mobile .A { grid-area: A; }
+.mobile .B { grid-area: B; }
+.mobile .C { grid-area: C; }
+.mobile .D { grid-area: D; }
+.mobile .E { grid-area: E; }
